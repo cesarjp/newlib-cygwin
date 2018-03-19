@@ -697,9 +697,9 @@ extern __FILE __sf[3];
 
 #define _REENT_INIT(var) \
   { 0, \
-    _REENT_STDIO_STREAM(&(var), 0), \
-    _REENT_STDIO_STREAM(&(var), 1), \
-    _REENT_STDIO_STREAM(&(var), 2), \
+    _NULL, \
+    _NULL, \
+    _NULL, \
     0, \
     "", \
     0, \

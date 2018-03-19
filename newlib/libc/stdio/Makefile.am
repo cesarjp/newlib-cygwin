@@ -4,236 +4,180 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
-if NEWLIB_NANO_FORMATTED_IO
-GENERAL_INT_FORMATTED_IO_SOURCES =
-else
-GENERAL_INT_FORMATTED_IO_SOURCES = \
-	fiprintf.c			\
-	fiscanf.c			\
-	iprintf.c			\
-	iscanf.c			\
-	siprintf.c			\
-	siscanf.c			\
-	sniprintf.c			\
-	vdiprintf.c			\
-	vfprintf.c			\
-	vfwprintf.c			\
-	viprintf.c			\
-	viscanf.c			\
-	vsiprintf.c			\
-	vsiscanf.c			\
-	vsniprintf.c
-endif
+GENERAL_INT_FORMATTED_IO_SOURCES = siprintf.c siscanf.c
+#if NEWLIB_NANO_FORMATTED_IO
+#GENERAL_INT_FORMATTED_IO_SOURCES =
+#else
+#GENERAL_INT_FORMATTED_IO_SOURCES = \
+#	fiprintf.c			\
+#	fiscanf.c			\
+#	iprintf.c			\
+#	iscanf.c			\
+#	siprintf.c			\
+#	siscanf.c			\
+#	sniprintf.c			\
+#	vdiprintf.c			\
+#	vfprintf.c			\
+#	vfwprintf.c			\
+#	viprintf.c			\
+#	viscanf.c			\
+#	vsiprintf.c			\
+#	vsiscanf.c			\
+#	vsniprintf.c
+#endif
 
 GENERAL_SOURCES = \
 	$(GENERAL_INT_FORMATTED_IO_SOURCES) \
-	clearerr.c			\
-	fclose.c			\
-	fdopen.c			\
-	feof.c				\
-	ferror.c			\
-	fflush.c			\
-	fgetc.c			\
-	fgetpos.c			\
-	fgets.c			\
-	fileno.c			\
-	findfp.c			\
-	flags.c			\
-	fopen.c			\
-	fprintf.c			\
-	fputc.c			\
-	fputs.c			\
-	fread.c			\
-	freopen.c			\
-	fscanf.c			\
-	fseek.c			\
-	fsetpos.c			\
-	ftell.c			\
-	fvwrite.c			\
-	fwalk.c			\
-	fwrite.c			\
-	getc.c				\
-	getchar.c			\
-	getc_u.c			\
-	getchar_u.c			\
-	getdelim.c			\
-	getline.c			\
-	gets.c				\
-	makebuf.c			\
-	perror.c			\
-	printf.c			\
-	putc.c				\
-	putchar.c			\
-	putc_u.c			\
-	putchar_u.c			\
-	puts.c				\
-	refill.c			\
-	remove.c			\
-	rename.c			\
-	rewind.c			\
-	rget.c				\
-	scanf.c			\
-	sccl.c				\
-	setbuf.c			\
-	setbuffer.c			\
-	setlinebuf.c			\
-	setvbuf.c			\
 	snprintf.c			\
 	sprintf.c			\
 	sscanf.c			\
-	stdio.c			\
-	tmpfile.c			\
-	tmpnam.c			\
-	ungetc.c			\
-	vdprintf.c			\
-	vprintf.c			\
-	vscanf.c			\
 	vsnprintf.c			\
 	vsprintf.c			\
-	vsscanf.c			\
-	wbuf.c				\
-	wsetup.c
+	vfprintf.c			\
+	vsscanf.c			
 
-## The following are EL/IX level 2 interfaces
-if ELIX_LEVEL_1
-ELIX_2_SOURCES =
-else
-if NEWLIB_NANO_FORMATTED_IO
-ELIX_2_INT_FORMATTED_IO_SOURCES =
-else
-ELIX_2_INT_FORMATTED_IO_SOURCES = \
-	asiprintf.c		\
-	vasiprintf.c
+LIBADD_OBJS= $(lpfx)svfiprintf.$(oext) $(lpfx)svfprintf.$(oext)
 
-endif !NEWLIB_NANO_FORMATTED_IO
-ELIX_2_SOURCES = \
-	$(ELIX_2_INT_FORMATTED_IO_SOURCES) \
-	asprintf.c		\
-	fcloseall.c		\
-	fseeko.c		\
-	ftello.c		\
-	getw.c			\
-	mktemp.c		\
-	putw.c			\
-	vasprintf.c
-endif !ELIX_LEVEL_1
-
-## The following are EL/IX level 2 interfaces
-if ELIX_LEVEL_1
-ELIX_4_SOURCES =
-else
-if ELIX_LEVEL_2
-ELIX_4_SOURCES =
-else
-if ELIX_LEVEL_3
-ELIX_4_SOURCES =
-else
-if NEWLIB_NANO_FORMATTED_IO
-ELIX_4_INT_FORMATTED_IO_SOURCES =
-else
-ELIX_4_INT_FORMATTED_IO_SOURCES = \
-	asniprintf.c		\
-	diprintf.c		\
-	vasniprintf.c
-
-endif !NEWLIB_NANO_FORMATTED_IO
-ELIX_4_SOURCES = \
-	$(ELIX_4_INT_FORMATTED_IO_SOURCES) \
-	asnprintf.c		\
-	clearerr_u.c		\
-	dprintf.c		\
-	feof_u.c		\
-	ferror_u.c		\
-	fflush_u.c		\
-	fgetc_u.c		\
-	fgets_u.c		\
-	fgetwc.c		\
-	fgetwc_u.c		\
-	fgetws.c		\
-	fgetws_u.c		\
-	fileno_u.c		\
-	fmemopen.c		\
-	fopencookie.c		\
-	fpurge.c		\
-	fputc_u.c		\
-	fputs_u.c		\
-	fputwc.c		\
-	fputwc_u.c		\
-	fputws.c		\
-	fputws_u.c		\
-	fread_u.c		\
-	fsetlocking.c		\
-	funopen.c		\
-	fwide.c			\
-	fwprintf.c		\
-	fwrite_u.c		\
-	fwscanf.c		\
-	getwc.c			\
-	getwc_u.c		\
-	getwchar.c		\
-	getwchar_u.c		\
-	open_memstream.c	\
-	putwc.c			\
-	putwc_u.c		\
-	putwchar.c		\
-	putwchar_u.c		\
-	stdio_ext.c		\
-	swprintf.c		\
-	swscanf.c		\
-	ungetwc.c		\
-	vasnprintf.c		\
-	vswprintf.c		\
-	vswscanf.c		\
-	vwprintf.c		\
-	vwscanf.c		\
-	wprintf.c		\
-	wscanf.c
-
-endif !ELIX_LEVEL_3
-endif !ELIX_LEVEL_2
-endif !ELIX_LEVEL_1
-
-if NEWLIB_NANO_FORMATTED_IO
-LIBADD_OBJS = \
-	$(lpfx)nano-vfprintf_float.$(oext)	\
-	$(lpfx)nano-svfprintf.$(oext)		\
-	$(lpfx)nano-svfscanf.$(oext)		\
-	$(lpfx)nano-vfprintf.$(oext)		\
-	$(lpfx)nano-vfprintf_i.$(oext)		\
-	$(lpfx)nano-vfscanf.$(oext)		\
-	$(lpfx)nano-vfscanf_i.$(oext)		\
-	$(lpfx)nano-vfscanf_float.$(oext)	\
-	$(lpfx)svfiwprintf.$(oext)		\
-	$(lpfx)svfwprintf.$(oext)		\
-	$(lpfx)vfiwprintf.$(oext)		\
-	$(lpfx)svfiwscanf.$(oext)		\
-	$(lpfx)svfwscanf.$(oext)		\
-	$(lpfx)vfiwscanf.$(oext)		\
-	$(lpfx)vfwscanf.$(oext)
-else
-LIBADD_OBJS = \
-	$(lpfx)svfiprintf.$(oext) $(lpfx)svfprintf.$(oext) \
-	$(lpfx)svfiscanf.$(oext) $(lpfx)svfscanf.$(oext) \
-	$(lpfx)vfiprintf.$(oext) \
-	$(lpfx)vfscanf.$(oext) $(lpfx)vfiscanf.$(oext) \
-	$(lpfx)svfiwprintf.$(oext) $(lpfx)svfwprintf.$(oext) \
-	$(lpfx)vfiwprintf.$(oext) \
-	$(lpfx)svfiwscanf.$(oext) $(lpfx)svfwscanf.$(oext) \
-	$(lpfx)vfiwscanf.$(oext) $(lpfx)vfwscanf.$(oext)
-endif
+### The following are EL/IX level 2 interfaces
+#if ELIX_LEVEL_1
+#ELIX_2_SOURCES =
+#else
+#if NEWLIB_NANO_FORMATTED_IO
+#ELIX_2_INT_FORMATTED_IO_SOURCES =
+#else
+#ELIX_2_INT_FORMATTED_IO_SOURCES = \
+#	asiprintf.c		\
+#	vasiprintf.c
+#
+#endif !NEWLIB_NANO_FORMATTED_IO
+#ELIX_2_SOURCES = \
+#	$(ELIX_2_INT_FORMATTED_IO_SOURCES) \
+#	asprintf.c		\
+#	fcloseall.c		\
+#	fseeko.c		\
+#	ftello.c		\
+#	getw.c			\
+#	mktemp.c		\
+#	putw.c			\
+#	vasprintf.c
+#endif !ELIX_LEVEL_1
+#
+### The following are EL/IX level 2 interfaces
+#if ELIX_LEVEL_1
+#ELIX_4_SOURCES =
+#else
+#if ELIX_LEVEL_2
+#ELIX_4_SOURCES =
+#else
+#if ELIX_LEVEL_3
+#ELIX_4_SOURCES =
+#else
+#if NEWLIB_NANO_FORMATTED_IO
+#ELIX_4_INT_FORMATTED_IO_SOURCES =
+#else
+#ELIX_4_INT_FORMATTED_IO_SOURCES = \
+#	asniprintf.c		\
+#	diprintf.c		\
+#	vasniprintf.c
+#
+#endif !NEWLIB_NANO_FORMATTED_IO
+#ELIX_4_SOURCES = \
+#	$(ELIX_4_INT_FORMATTED_IO_SOURCES) \
+#	asnprintf.c		\
+#	clearerr_u.c		\
+#	dprintf.c		\
+#	feof_u.c		\
+#	ferror_u.c		\
+#	fflush_u.c		\
+#	fgetc_u.c		\
+#	fgets_u.c		\
+#	fgetwc.c		\
+#	fgetwc_u.c		\
+#	fgetws.c		\
+#	fgetws_u.c		\
+#	fileno_u.c		\
+#	fmemopen.c		\
+#	fopencookie.c		\
+#	fpurge.c		\
+#	fputc_u.c		\
+#	fputs_u.c		\
+#	fputwc.c		\
+#	fputwc_u.c		\
+#	fputws.c		\
+#	fputws_u.c		\
+#	fread_u.c		\
+#	fsetlocking.c		\
+#	funopen.c		\
+#	fwide.c			\
+#	fwprintf.c		\
+#	fwrite_u.c		\
+#	fwscanf.c		\
+#	getwc.c			\
+#	getwc_u.c		\
+#	getwchar.c		\
+#	getwchar_u.c		\
+#	open_memstream.c	\
+#	putwc.c			\
+#	putwc_u.c		\
+#	putwchar.c		\
+#	putwchar_u.c		\
+#	stdio_ext.c		\
+#	swprintf.c		\
+#	swscanf.c		\
+#	ungetwc.c		\
+#	vasnprintf.c		\
+#	vswprintf.c		\
+#	vswscanf.c		\
+#	vwprintf.c		\
+#	vwscanf.c		\
+#	wprintf.c		\
+#	wscanf.c
+#
+#endif !ELIX_LEVEL_3
+#endif !ELIX_LEVEL_2
+#endif !ELIX_LEVEL_1
+#
+#if NEWLIB_NANO_FORMATTED_IO
+#LIBADD_OBJS = \
+#	$(lpfx)nano-vfprintf_float.$(oext)	\
+#	$(lpfx)nano-svfprintf.$(oext)		\
+#	$(lpfx)nano-svfscanf.$(oext)		\
+#	$(lpfx)nano-vfprintf.$(oext)		\
+#	$(lpfx)nano-vfprintf_i.$(oext)		\
+#	$(lpfx)nano-vfscanf.$(oext)		\
+#	$(lpfx)nano-vfscanf_i.$(oext)		\
+#	$(lpfx)nano-vfscanf_float.$(oext)	\
+#	$(lpfx)svfiwprintf.$(oext)		\
+#	$(lpfx)svfwprintf.$(oext)		\
+#	$(lpfx)vfiwprintf.$(oext)		\
+#	$(lpfx)svfiwscanf.$(oext)		\
+#	$(lpfx)svfwscanf.$(oext)		\
+#	$(lpfx)vfiwscanf.$(oext)		\
+#	$(lpfx)vfwscanf.$(oext)
+#else
+#LIBADD_OBJS = \
+#	$(lpfx)svfiprintf.$(oext) $(lpfx)svfprintf.$(oext) \
+#	$(lpfx)svfiscanf.$(oext) $(lpfx)svfscanf.$(oext) \
+#	$(lpfx)vfiprintf.$(oext) \
+#	$(lpfx)vfscanf.$(oext) $(lpfx)vfiscanf.$(oext) \
+#	$(lpfx)svfiwprintf.$(oext) $(lpfx)svfwprintf.$(oext) \
+#	$(lpfx)vfiwprintf.$(oext) \
+#	$(lpfx)svfiwscanf.$(oext) $(lpfx)svfwscanf.$(oext) \
+#	$(lpfx)vfiwscanf.$(oext) $(lpfx)vfwscanf.$(oext)
+#endif
 
 libstdio_la_LDFLAGS = -Xcompiler -nostdlib
 
 if USE_LIBTOOL
 noinst_LTLIBRARIES = libstdio.la
-libstdio_la_SOURCES = $(GENERAL_SOURCES) $(ELIX_2_SOURCES) $(ELIX_4_SOURCES)
+libstdio_la_SOURCES = $(GENERAL_SOURCES)
 libstdio_la_LIBADD = $(LIBADD_OBJS)
 libstdio_la_DEPENDENCIES = $(LIBADD_OBJS)
 LIB_COMPILE = $(LTCOMPILE)
 noinst_DATA = objectlist.awk.in
 else
 noinst_LIBRARIES = lib.a
-lib_a_SOURCES = $(GENERAL_SOURCES) $(ELIX_2_SOURCES) $(ELIX_4_SOURCES)
+lib_a_SOURCES = $(GENERAL_SOURCES)
 lib_a_LIBADD = $(LIBADD_OBJS)
 lib_a_CFLAGS = $(AM_CFLAGS)
 lib_a_DEPENDENCIES = $(LIBADD_OBJS)

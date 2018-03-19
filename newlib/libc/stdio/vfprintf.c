@@ -234,8 +234,8 @@ __ssputs_r (struct _reent *ptr,
 		}
 		else
 		{
-			str = (unsigned char *)_realloc_r (ptr, fp->_bf._base,
-					newsize);
+			str = (unsigned char *)_realloc_os_r (ptr, fp->_bf._base,
+				newsize, fp->_bf._size);
 			if (!str) {
 				/* Free unneeded buffer.  */
 				_free_r (ptr, fp->_bf._base);
@@ -318,8 +318,8 @@ __ssprint_r (struct _reent *ptr,
 			}
 			else
 			{
-				str = (unsigned char *)_realloc_r (ptr, fp->_bf._base,
-						newsize);
+				str = (unsigned char *)_realloc_os_r (ptr, fp->_bf._base,
+					newsize, fp->_bf._size);
 				if (!str) {
 					/* Free unneeded buffer.  */
 					_free_r (ptr, fp->_bf._base);

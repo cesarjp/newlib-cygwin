@@ -290,6 +290,7 @@ void *	_malloc_r (struct _reent *, size_t) _NOTHROW;
 void *	_calloc_r (struct _reent *, size_t, size_t) _NOTHROW;
 void	_free_r (struct _reent *, void *) _NOTHROW;
 void *	_realloc_r (struct _reent *, void *, size_t) _NOTHROW;
+void *  _realloc_os_r (struct _reent *, void *, size_t, size_t) _NOTHROW;
 void	_mstats_r (struct _reent *, char *);
 #endif
 int	_system_r (struct _reent *, const char *);
