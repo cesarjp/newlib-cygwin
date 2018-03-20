@@ -4,14 +4,27 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
+if NEWLIB_MINIMAL_GPU
+STDIO64_SOURCES =
+STDIO64_DEFS =
+else
 if HAVE_STDIO64_DIR
-STDIO64_SOURCES = 
+STDIO64_SOURCES = \
+	fstat64r.c \
+	lseek64r.c \
+	stat64r.c \
+	open64r.c
 
-STDIO64_DEFS = 
+STDIO64_DEFS = \
+	fstat64r.def \
+	lseek64r.def \
+	stat64r.def \
+	open64r.def
+endif
 endif
 
 ELIX_2_SOURCES = $(STDIO64_SOURCES)
-ELIX_3_SOURCES = 
+ELIX_3_SOURCES = execr.c
 
 if ELIX_LEVEL_1
 ELIX_SOURCES =
@@ -23,9 +36,34 @@ ELIX_SOURCES = $(ELIX_2_SOURCES) $(ELIX_3_SOURCES)
 endif
 endif
 
+if NEWLIB_MINIMAL_GPU
 GENERAL_SOURCES = \
 	reent.c \
-	impure.c 
+	impure.c
+else
+GENERAL_SOURCES = \
+	closer.c \
+	reent.c \
+	impure.c \
+	fcntlr.c \
+	fstatr.c \
+	getreent.c \
+	gettimeofdayr.c \
+	isattyr.c \
+	linkr.c \
+	lseekr.c \
+	mkdirr.c \
+	openr.c \
+	readr.c \
+	renamer.c \
+	signalr.c \
+	signgam.c \
+	sbrkr.c \
+	statr.c \
+	timesr.c \
+	unlinkr.c \
+	writer.c
+endif
 
 libreent_la_LDFLAGS = -Xcompiler -nostdlib
 

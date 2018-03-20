@@ -77,13 +77,23 @@ lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
 @NEWLIB_RETARGETABLE_LOCKING_TRUE@am__objects_1 =  \
 @NEWLIB_RETARGETABLE_LOCKING_TRUE@	lib_a-lock.$(OBJEXT)
-am__objects_2 = lib_a-ffs.$(OBJEXT) $(am__objects_1)
+@NEWLIB_MINIMAL_GPU_FALSE@am__objects_2 = lib_a-__dprintf.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-unctrl.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-ffs.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-init.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fini.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_FALSE@	$(am__objects_1)
+@NEWLIB_MINIMAL_GPU_TRUE@am__objects_2 = lib_a-ffs.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_TRUE@	$(am__objects_1)
 @USE_LIBTOOL_FALSE@am_lib_a_OBJECTS = $(am__objects_2)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libmisc_la_LIBADD =
 @NEWLIB_RETARGETABLE_LOCKING_TRUE@am__objects_3 = lock.lo
-am__objects_4 = ffs.lo $(am__objects_3)
+@NEWLIB_MINIMAL_GPU_FALSE@am__objects_4 = __dprintf.lo unctrl.lo \
+@NEWLIB_MINIMAL_GPU_FALSE@	ffs.lo init.lo fini.lo \
+@NEWLIB_MINIMAL_GPU_FALSE@	$(am__objects_3)
+@NEWLIB_MINIMAL_GPU_TRUE@am__objects_4 = ffs.lo $(am__objects_3)
 @USE_LIBTOOL_TRUE@am_libmisc_la_OBJECTS = $(am__objects_4)
 libmisc_la_OBJECTS = $(am_libmisc_la_OBJECTS)
 libmisc_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
@@ -245,7 +255,6 @@ pdfdir = @pdfdir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
-runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -258,7 +267,9 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-LIB_SOURCES = ffs.c $(am__append_1)
+@NEWLIB_MINIMAL_GPU_FALSE@LIB_SOURCES = __dprintf.c unctrl.c ffs.c \
+@NEWLIB_MINIMAL_GPU_FALSE@	init.c fini.c $(am__append_1)
+@NEWLIB_MINIMAL_GPU_TRUE@LIB_SOURCES = ffs.c $(am__append_1)
 libmisc_la_LDFLAGS = -Xcompiler -nostdlib
 @USE_LIBTOOL_TRUE@noinst_LTLIBRARIES = libmisc.la
 @USE_LIBTOOL_TRUE@libmisc_la_SOURCES = $(LIB_SOURCES)
@@ -348,11 +359,35 @@ distclean-compile:
 .c.lo:
 	$(LTCOMPILE) -c -o $@ $<
 
+lib_a-__dprintf.o: __dprintf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-__dprintf.o `test -f '__dprintf.c' || echo '$(srcdir)/'`__dprintf.c
+
+lib_a-__dprintf.obj: __dprintf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-__dprintf.obj `if test -f '__dprintf.c'; then $(CYGPATH_W) '__dprintf.c'; else $(CYGPATH_W) '$(srcdir)/__dprintf.c'; fi`
+
+lib_a-unctrl.o: unctrl.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-unctrl.o `test -f 'unctrl.c' || echo '$(srcdir)/'`unctrl.c
+
+lib_a-unctrl.obj: unctrl.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-unctrl.obj `if test -f 'unctrl.c'; then $(CYGPATH_W) 'unctrl.c'; else $(CYGPATH_W) '$(srcdir)/unctrl.c'; fi`
+
 lib_a-ffs.o: ffs.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ffs.o `test -f 'ffs.c' || echo '$(srcdir)/'`ffs.c
 
 lib_a-ffs.obj: ffs.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ffs.obj `if test -f 'ffs.c'; then $(CYGPATH_W) 'ffs.c'; else $(CYGPATH_W) '$(srcdir)/ffs.c'; fi`
+
+lib_a-init.o: init.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-init.o `test -f 'init.c' || echo '$(srcdir)/'`init.c
+
+lib_a-init.obj: init.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-init.obj `if test -f 'init.c'; then $(CYGPATH_W) 'init.c'; else $(CYGPATH_W) '$(srcdir)/init.c'; fi`
+
+lib_a-fini.o: fini.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fini.o `test -f 'fini.c' || echo '$(srcdir)/'`fini.c
+
+lib_a-fini.obj: fini.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fini.obj `if test -f 'fini.c'; then $(CYGPATH_W) 'fini.c'; else $(CYGPATH_W) '$(srcdir)/fini.c'; fi`
 
 lib_a-lock.o: lock.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-lock.o `test -f 'lock.c' || echo '$(srcdir)/'`lock.c

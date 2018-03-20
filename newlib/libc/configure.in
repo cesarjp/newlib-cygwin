@@ -186,6 +186,11 @@ fi
 AC_SUBST(LIBC_SYS_LIB)
 AC_SUBST(sys_dir)
 
+dnl GPU devices function as offload accelerators, and therefore do not
+dnl require a complete C libraray.
+
+AM_CONDITIONAL(NEWLIB_MINIMAL_GPU, test x${minimal_gpu} != x)
+
 dnl Autoconf 2.59 doesn't support the AC_TYPE_LONG_DOUBLE macro. Instead of:
 dnl   AC_TYPE_LONG_DOUBLE
 dnl   AM_CONDITIONAL(HAVE_LONG_DOUBLE, test x"$ac_cv_type_long_double" = x"yes")

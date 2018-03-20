@@ -75,6 +75,7 @@ default_newlib_nano_malloc=no
 aext=a
 oext=o
 lpfx="lib_a-"
+minimal_gpu=no
 
 case "${target_optspace}:${host}" in
   yes:*)
@@ -252,6 +253,7 @@ case "${host_cpu}" in
   nvptx*)
 	newlib_cflags="${newlib_cflags} -DMALLOC_PROVIDED"
 	machine_dir=nvptx
+	minimal_gpu=yes
 	;;
   or1k*|or1knd*)
 	machine_dir=or1k

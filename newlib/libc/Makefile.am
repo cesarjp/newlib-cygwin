@@ -40,38 +40,61 @@ endif
 
 # The order of SUBDIRS is important for the integrated documentation.
 # Do not change the order without considering the doc impact.
-SUBDIRS = stdlib ctype search $(STDIO_SUBDIR) string locale reent errno misc machine .
+SUBDIRS = argz stdlib ctype search $(STDIO_SUBDIR) $(STDIO64_SUBDIR) string $(SIGNAL_SUBDIR) time locale sys reent \
+	$(extra_dir) errno misc machine $(UNIX_SUBDIR) $(POSIX_SUBDIR) $(SYSCALLS_SUBDIR) $(NEWLIB_ICONV_DIRS) \
+	$(XDR_SUBDIR) ssp .
 
 noinst_DATA = $(CRT0)
 
 if USE_LIBTOOL
 noinst_LTLIBRARIES = libc.la
 SUBLIBS = \
+	argz/libargz.$(aext) \
 	stdlib/libstdlib.$(aext) \
 	ctype/libctype.$(aext) \
 	search/libsearch.$(aext) \
 	$(LIBC_STDIO_LIB) \
+	$(LIBC_STDIO64_LIB) \
+	$(LIBC_XDR_LIB) \
 	string/libstring.$(aext) \
+	$(LIBC_SIGNAL_LIB) \
+	time/libtime.$(aext) \
 	locale/liblocale.$(aext) \
 	reent/libreent.$(aext) \
 	$(LIBC_EXTRA_LIB) \
-	$(LIBC_MACHINE_LIB) \
 	errno/liberrno.$(aext) \
-	misc/libmisc.$(aext)
+	misc/libmisc.$(aext) \
+	ssp/libssp.$(aext) \
+	$(LIBC_UNIX_LIB) \
+	$(LIBC_POSIX_LIB) \
+	$(LIBC_SYSCALL_LIB) \
+	$(LIBC_MACHINE_LIB) \
+	$(LIBC_SYS_LIB)
 else
 noinst_LIBRARIES = libc.a
 SUBLIBS = \
+	argz/lib.$(aext) \
 	stdlib/lib.$(aext) \
-	$(LIBC_STDIO_LIB) \
 	ctype/lib.$(aext) \
 	search/lib.$(aext) \
+	$(LIBC_STDIO_LIB) \
+	$(LIBC_STDIO64_LIB) \
+	$(LIBC_XDR_LIB) \
 	string/lib.$(aext) \
+	$(LIBC_SIGNAL_LIB) \
+	time/lib.$(aext) \
 	locale/lib.$(aext) \
 	reent/lib.$(aext) \
 	$(LIBC_EXTRA_LIB) \
-	$(LIBC_MACHINE_LIB) \
 	errno/lib.$(aext) \
-	misc/lib.$(aext)
+	misc/lib.$(aext) \
+	ssp/lib.$(aext) \
+	$(LIBC_UNIX_LIB) \
+	$(LIBC_POSIX_LIB) \
+	$(LIBC_SYSCALL_LIB) \
+        $(NEWLIB_ICONV_LIBS) \
+	$(LIBC_MACHINE_LIB) \
+	$(LIBC_SYS_LIB)
 endif
 
 libc_la_LDFLAGS = -Xcompiler -nostdlib
