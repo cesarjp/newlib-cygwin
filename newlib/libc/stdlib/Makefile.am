@@ -20,6 +20,8 @@ GENERAL_SOURCES = \
         labs.c          \
         ldiv.c          \
         ldtoa.c         \
+	mbtowc.c	\
+	mbtowc_r.c	\
         mprec.c         \
         rand.c          \
         rand_r.c        \

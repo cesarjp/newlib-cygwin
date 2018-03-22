@@ -174,6 +174,8 @@ lib_a_AR = $(AR) $(ARFLAGS)
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-labs.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-ldiv.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-ldtoa.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-mbtowc.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-mbtowc_r.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-mprec.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-rand.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-rand_r.$(OBJEXT) \
@@ -284,9 +286,9 @@ LTLIBRARIES = $(noinst_LTLIBRARIES)
 @NEWLIB_MINIMAL_GPU_TRUE@	atoff.lo atoi.lo atol.lo div.lo \
 @NEWLIB_MINIMAL_GPU_TRUE@	dtoa.lo dtoastub.lo gdtoa-gethex.lo \
 @NEWLIB_MINIMAL_GPU_TRUE@	gdtoa-hexnan.lo labs.lo ldiv.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	ldtoa.lo mprec.lo rand.lo rand_r.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strtod.lo strtol.lo strtoul.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	$(am__objects_8)
+@NEWLIB_MINIMAL_GPU_TRUE@	ldtoa.lo mbtowc.lo mbtowc_r.lo \
+@NEWLIB_MINIMAL_GPU_TRUE@	mprec.lo rand.lo rand_r.lo strtod.lo \
+@NEWLIB_MINIMAL_GPU_TRUE@	strtol.lo strtoul.lo $(am__objects_8)
 @NEWLIB_MINIMAL_GPU_FALSE@am__objects_10 = arc4random.lo \
 @NEWLIB_MINIMAL_GPU_FALSE@	arc4random_uniform.lo cxa_atexit.lo \
 @NEWLIB_MINIMAL_GPU_FALSE@	cxa_finalize.lo drand48.lo \
@@ -521,8 +523,9 @@ INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 @NEWLIB_MINIMAL_GPU_TRUE@	atoff.c atoi.c atol.c div.c dtoa.c \
 @NEWLIB_MINIMAL_GPU_TRUE@	dtoastub.c gdtoa-gethex.c \
 @NEWLIB_MINIMAL_GPU_TRUE@	gdtoa-hexnan.c labs.c ldiv.c ldtoa.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	mprec.c rand.c rand_r.c strtod.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strtol.c strtoul.c $(am__append_1)
+@NEWLIB_MINIMAL_GPU_TRUE@	mbtowc.c mbtowc_r.c mprec.c rand.c \
+@NEWLIB_MINIMAL_GPU_TRUE@	rand_r.c strtod.c strtol.c strtoul.c \
+@NEWLIB_MINIMAL_GPU_TRUE@	$(am__append_1)
 @NEWLIB_NANO_MALLOC_FALSE@MALIGNR = malignr
 @NEWLIB_NANO_MALLOC_TRUE@MALIGNR = nano-malignr
 @NEWLIB_NANO_MALLOC_FALSE@MALLOPTR = malloptr
