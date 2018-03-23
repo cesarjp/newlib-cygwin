@@ -27,7 +27,9 @@ GENERAL_SOURCES = \
         rand_r.c        \
         strtod.c        \
         strtol.c        \
-        strtoul.c
+        strtoul.c	\
+	wctomb.c	\
+	wctomb_r.c
 else
 GENERAL_SOURCES = \
 	__adjust.c 	\

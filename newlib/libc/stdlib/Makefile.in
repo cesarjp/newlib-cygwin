@@ -182,6 +182,8 @@ lib_a_AR = $(AR) $(ARFLAGS)
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strtod.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strtol.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strtoul.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-wctomb.$(OBJEXT) \
+@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-wctomb_r.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_TRUE@	$(am__objects_1)
 @NEWLIB_MINIMAL_GPU_FALSE@am__objects_3 = lib_a-arc4random.$(OBJEXT) \
 @NEWLIB_MINIMAL_GPU_FALSE@	lib_a-arc4random_uniform.$(OBJEXT) \
@@ -288,7 +290,8 @@ LTLIBRARIES = $(noinst_LTLIBRARIES)
 @NEWLIB_MINIMAL_GPU_TRUE@	gdtoa-hexnan.lo labs.lo ldiv.lo \
 @NEWLIB_MINIMAL_GPU_TRUE@	ldtoa.lo mbtowc.lo mbtowc_r.lo \
 @NEWLIB_MINIMAL_GPU_TRUE@	mprec.lo rand.lo rand_r.lo strtod.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strtol.lo strtoul.lo $(am__objects_8)
+@NEWLIB_MINIMAL_GPU_TRUE@	strtol.lo strtoul.lo wctomb.lo \
+@NEWLIB_MINIMAL_GPU_TRUE@	wctomb_r.lo $(am__objects_8)
 @NEWLIB_MINIMAL_GPU_FALSE@am__objects_10 = arc4random.lo \
 @NEWLIB_MINIMAL_GPU_FALSE@	arc4random_uniform.lo cxa_atexit.lo \
 @NEWLIB_MINIMAL_GPU_FALSE@	cxa_finalize.lo drand48.lo \
@@ -484,6 +487,7 @@ pdfdir = @pdfdir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -525,7 +529,7 @@ INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 @NEWLIB_MINIMAL_GPU_TRUE@	gdtoa-hexnan.c labs.c ldiv.c ldtoa.c \
 @NEWLIB_MINIMAL_GPU_TRUE@	mbtowc.c mbtowc_r.c mprec.c rand.c \
 @NEWLIB_MINIMAL_GPU_TRUE@	rand_r.c strtod.c strtol.c strtoul.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	$(am__append_1)
+@NEWLIB_MINIMAL_GPU_TRUE@	wctomb.c wctomb_r.c $(am__append_1)
 @NEWLIB_NANO_MALLOC_FALSE@MALIGNR = malignr
 @NEWLIB_NANO_MALLOC_TRUE@MALIGNR = nano-malignr
 @NEWLIB_NANO_MALLOC_FALSE@MALLOPTR = malloptr
