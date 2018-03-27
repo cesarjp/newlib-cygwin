@@ -4,33 +4,6 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
-if NEWLIB_MINIMAL_GPU
-GENERAL_SOURCES = \
-        abs.c           \
-        assert.c        \
-        atof.c          \
-        atoff.c         \
-        atoi.c          \
-        atol.c          \
-        div.c           \
-        dtoa.c          \
-        dtoastub.c      \
-        gdtoa-gethex.c  \
-        gdtoa-hexnan.c  \
-        labs.c          \
-        ldiv.c          \
-        ldtoa.c         \
-	mbtowc.c	\
-	mbtowc_r.c	\
-        mprec.c         \
-        rand.c          \
-        rand_r.c        \
-        strtod.c        \
-        strtol.c        \
-        strtoul.c	\
-	wctomb.c	\
-	wctomb_r.c
-else
 GENERAL_SOURCES = \
 	__adjust.c 	\
 	__atexit.c	\
@@ -101,7 +74,6 @@ GENERAL_SOURCES = \
 	wcstombs_r.c	\
 	wctomb.c	\
 	wctomb_r.c
-endif
 
 if HAVE_LONG_DOUBLE
 GENERAL_SOURCES += \
@@ -137,31 +109,6 @@ MSIZER=msizer
 MALLOCR=mallocr
 endif
 
-if NEWLIB_MINIMAL_GPU
-EXTENDED_SOURCES = \
-	drand48.c       \
-        ecvtbuf.c       \
-        efgcvt.c        \
-        erand48.c       \
-        jrand48.c       \
-        lcong48.c       \
-        lrand48.c       \
-        mrand48.c       \
-        nrand48.c       \
-        rand48.c        \
-        seed48.c        \
-        srand48.c       \
-        strtoll.c       \
-        strtoll_r.c     \
-        strtoull.c      \
-        strtoull_r.c    \
-        atoll.c         \
-        llabs.c         \
-        lldiv.c	        \
-        a64l.c          \
-        btowc.c         \
-        l64a.c
-else
 EXTENDED_SOURCES = \
 	arc4random.c	\
 	arc4random_uniform.c \
@@ -192,7 +139,6 @@ EXTENDED_SOURCES = \
 	atoll.c		\
 	llabs.c		\
 	lldiv.c
-endif
 
 ELIX_2_SOURCES = \
 	a64l.c		\
@@ -248,14 +194,10 @@ endif
 endif
 
 # Because of how libtool moves objects around, mallocr must be built last.
-if NEWLIB_MINIMAL_GPU
-LIBADD_OBJS =
-else
 LIBADD_OBJS = $(lpfx)$(FREER).$(oext) $(lpfx)$(REALLOCR).$(oext) \
 	$(lpfx)$(CALLOCR).$(oext) $(lpfx)$(CFREER).$(oext) \
 	$(lpfx)$(MALLINFOR).$(oext) $(lpfx)$(MALLSTATSR).$(oext) \
 	$(lpfx)$(MSIZER).$(oext) $(lpfx)$(MALLOCR).$(oext)
-endif
 
 libstdlib_la_LDFLAGS = -Xcompiler -nostdlib
 
