@@ -72,143 +72,45 @@ LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
-@NEWLIB_MINIMAL_GPU_FALSE@am__objects_1 = lib_a-bcopy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-bzero.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-explicit_bzero.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-ffsl.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-ffsll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fls.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-flsl.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-flsll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-index.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-memchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-memcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-memcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-memmove.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-memset.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-rindex.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strcasecmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strcat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strcoll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strcspn.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strdup.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strdup_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strerror.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strerror_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strlcat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strlcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strlen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strlwr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strncasecmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strncat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strncmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strncpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strnlen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strnstr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strpbrk.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strrchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strsep.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strsignal.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strspn.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strtok.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strtok_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strupr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strxfrm.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-strstr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-swab.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-timingsafe_bcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-timingsafe_memcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-u_strerr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcscat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcschr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcscmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcscoll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcscpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcscspn.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcslcat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcslcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcslen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsncat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsncmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsncpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsnlen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcspbrk.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsrchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsspn.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsstr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcstok.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcswidth.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcsxfrm.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wcwidth.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wmemchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wmemcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wmemcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wmemmove.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wmemset.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-xpg_strerror_r.$(OBJEXT)
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_1 = lib_a-bcopy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-bzero.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-explicit_bzero.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-ffsl.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-ffsll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-fls.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-flsl.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-flsll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-index.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memmove.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memset.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-rindex.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcasecmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcoll.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcspn.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strdup.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strdup_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strerror.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strerror_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strlcat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strlcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strlen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strlwr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strncasecmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strncat.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strncmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strncpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strnlen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strnstr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strpbrk.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strrchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strsep.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strsignal.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strspn.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strtok.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strtok_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strupr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strxfrm.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strstr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-swab.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-u_strerr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-bcmp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memccpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-mempcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-stpcpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-stpncpy.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strndup.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strcasestr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strndup_r.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-strchrnul.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memmem.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-memrchr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-rawmemchr.$(OBJEXT)
+am__objects_1 = lib_a-bcopy.$(OBJEXT) lib_a-bzero.$(OBJEXT) \
+	lib_a-explicit_bzero.$(OBJEXT) lib_a-ffsl.$(OBJEXT) \
+	lib_a-ffsll.$(OBJEXT) lib_a-fls.$(OBJEXT) lib_a-flsl.$(OBJEXT) \
+	lib_a-flsll.$(OBJEXT) lib_a-index.$(OBJEXT) \
+	lib_a-memchr.$(OBJEXT) lib_a-memcmp.$(OBJEXT) \
+	lib_a-memcpy.$(OBJEXT) lib_a-memmove.$(OBJEXT) \
+	lib_a-memset.$(OBJEXT) lib_a-rindex.$(OBJEXT) \
+	lib_a-strcasecmp.$(OBJEXT) lib_a-strcat.$(OBJEXT) \
+	lib_a-strchr.$(OBJEXT) lib_a-strcmp.$(OBJEXT) \
+	lib_a-strcoll.$(OBJEXT) lib_a-strcpy.$(OBJEXT) \
+	lib_a-strcspn.$(OBJEXT) lib_a-strdup.$(OBJEXT) \
+	lib_a-strdup_r.$(OBJEXT) lib_a-strerror.$(OBJEXT) \
+	lib_a-strerror_r.$(OBJEXT) lib_a-strlcat.$(OBJEXT) \
+	lib_a-strlcpy.$(OBJEXT) lib_a-strlen.$(OBJEXT) \
+	lib_a-strlwr.$(OBJEXT) lib_a-strncasecmp.$(OBJEXT) \
+	lib_a-strncat.$(OBJEXT) lib_a-strncmp.$(OBJEXT) \
+	lib_a-strncpy.$(OBJEXT) lib_a-strnlen.$(OBJEXT) \
+	lib_a-strnstr.$(OBJEXT) lib_a-strpbrk.$(OBJEXT) \
+	lib_a-strrchr.$(OBJEXT) lib_a-strsep.$(OBJEXT) \
+	lib_a-strsignal.$(OBJEXT) lib_a-strspn.$(OBJEXT) \
+	lib_a-strtok.$(OBJEXT) lib_a-strtok_r.$(OBJEXT) \
+	lib_a-strupr.$(OBJEXT) lib_a-strxfrm.$(OBJEXT) \
+	lib_a-strstr.$(OBJEXT) lib_a-swab.$(OBJEXT) \
+	lib_a-timingsafe_bcmp.$(OBJEXT) \
+	lib_a-timingsafe_memcmp.$(OBJEXT) lib_a-u_strerr.$(OBJEXT) \
+	lib_a-wcscat.$(OBJEXT) lib_a-wcschr.$(OBJEXT) \
+	lib_a-wcscmp.$(OBJEXT) lib_a-wcscoll.$(OBJEXT) \
+	lib_a-wcscpy.$(OBJEXT) lib_a-wcscspn.$(OBJEXT) \
+	lib_a-wcslcat.$(OBJEXT) lib_a-wcslcpy.$(OBJEXT) \
+	lib_a-wcslen.$(OBJEXT) lib_a-wcsncat.$(OBJEXT) \
+	lib_a-wcsncmp.$(OBJEXT) lib_a-wcsncpy.$(OBJEXT) \
+	lib_a-wcsnlen.$(OBJEXT) lib_a-wcspbrk.$(OBJEXT) \
+	lib_a-wcsrchr.$(OBJEXT) lib_a-wcsspn.$(OBJEXT) \
+	lib_a-wcsstr.$(OBJEXT) lib_a-wcstok.$(OBJEXT) \
+	lib_a-wcswidth.$(OBJEXT) lib_a-wcsxfrm.$(OBJEXT) \
+	lib_a-wcwidth.$(OBJEXT) lib_a-wmemchr.$(OBJEXT) \
+	lib_a-wmemcmp.$(OBJEXT) lib_a-wmemcpy.$(OBJEXT) \
+	lib_a-wmemmove.$(OBJEXT) lib_a-wmemset.$(OBJEXT) \
+	lib_a-xpg_strerror_r.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@am__objects_2 = lib_a-bcmp.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@	lib_a-memccpy.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@	lib_a-mempcpy.$(OBJEXT) \
@@ -242,53 +144,21 @@ lib_a_LIBADD =
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libstring_la_LIBADD =
-@NEWLIB_MINIMAL_GPU_FALSE@am__objects_4 = bcopy.lo bzero.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	explicit_bzero.lo ffsl.lo ffsll.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fls.lo flsl.lo flsll.lo index.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	memchr.lo memcmp.lo memcpy.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	memmove.lo memset.lo rindex.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcasecmp.lo strcat.lo strchr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcmp.lo strcoll.lo strcpy.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcspn.lo strdup.lo strdup_r.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strerror.lo strerror_r.lo strlcat.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strlcpy.lo strlen.lo strlwr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strncasecmp.lo strncat.lo strncmp.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strncpy.lo strnlen.lo strnstr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strpbrk.lo strrchr.lo strsep.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strsignal.lo strspn.lo strtok.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strtok_r.lo strupr.lo strxfrm.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	strstr.lo swab.lo timingsafe_bcmp.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	timingsafe_memcmp.lo u_strerr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscat.lo wcschr.lo wcscmp.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscoll.lo wcscpy.lo wcscspn.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcslcat.lo wcslcpy.lo wcslen.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsncat.lo wcsncmp.lo wcsncpy.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsnlen.lo wcspbrk.lo wcsrchr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsspn.lo wcsstr.lo wcstok.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcswidth.lo wcsxfrm.lo wcwidth.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemchr.lo wmemcmp.lo wmemcpy.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemmove.lo wmemset.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	xpg_strerror_r.lo
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_4 = bcopy.lo bzero.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	explicit_bzero.lo ffsl.lo ffsll.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	fls.lo flsl.lo flsll.lo index.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	memchr.lo memcmp.lo memcpy.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	memmove.lo memset.lo rindex.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcasecmp.lo strcat.lo strchr.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcmp.lo strcoll.lo strcpy.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcspn.lo strdup.lo strdup_r.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strerror.lo strerror_r.lo strlcat.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strlcpy.lo strlen.lo strlwr.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strncasecmp.lo strncat.lo strncmp.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strncpy.lo strnlen.lo strnstr.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strpbrk.lo strrchr.lo strsep.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strsignal.lo strspn.lo strtok.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strtok_r.lo strupr.lo strxfrm.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strstr.lo swab.lo u_strerr.lo bcmp.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	memccpy.lo mempcpy.lo stpcpy.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	stpncpy.lo strndup.lo strcasestr.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	strndup_r.lo strchrnul.lo memmem.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	memrchr.lo rawmemchr.lo
+am__objects_4 = bcopy.lo bzero.lo explicit_bzero.lo ffsl.lo ffsll.lo \
+	fls.lo flsl.lo flsll.lo index.lo memchr.lo memcmp.lo memcpy.lo \
+	memmove.lo memset.lo rindex.lo strcasecmp.lo strcat.lo \
+	strchr.lo strcmp.lo strcoll.lo strcpy.lo strcspn.lo strdup.lo \
+	strdup_r.lo strerror.lo strerror_r.lo strlcat.lo strlcpy.lo \
+	strlen.lo strlwr.lo strncasecmp.lo strncat.lo strncmp.lo \
+	strncpy.lo strnlen.lo strnstr.lo strpbrk.lo strrchr.lo \
+	strsep.lo strsignal.lo strspn.lo strtok.lo strtok_r.lo \
+	strupr.lo strxfrm.lo strstr.lo swab.lo timingsafe_bcmp.lo \
+	timingsafe_memcmp.lo u_strerr.lo wcscat.lo wcschr.lo wcscmp.lo \
+	wcscoll.lo wcscpy.lo wcscspn.lo wcslcat.lo wcslcpy.lo \
+	wcslen.lo wcsncat.lo wcsncmp.lo wcsncpy.lo wcsnlen.lo \
+	wcspbrk.lo wcsrchr.lo wcsspn.lo wcsstr.lo wcstok.lo \
+	wcswidth.lo wcsxfrm.lo wcwidth.lo wmemchr.lo wmemcmp.lo \
+	wmemcpy.lo wmemmove.lo wmemset.lo xpg_strerror_r.lo
 @ELIX_LEVEL_1_FALSE@am__objects_5 = bcmp.lo memccpy.lo mempcpy.lo \
 @ELIX_LEVEL_1_FALSE@	stpcpy.lo stpncpy.lo strndup.lo \
 @ELIX_LEVEL_1_FALSE@	strcasestr.lo strchrnul.lo strndup_r.lo \
@@ -483,146 +353,84 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-@NEWLIB_MINIMAL_GPU_FALSE@GENERAL_SOURCES = \
-@NEWLIB_MINIMAL_GPU_FALSE@	bcopy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	bzero.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	explicit_bzero.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	ffsl.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	ffsll.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	fls.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	flsl.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	flsll.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	index.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	memchr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	memcmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	memcpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	memmove.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	memset.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	rindex.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcasecmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcat.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strchr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcoll.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strcspn.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strdup.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strdup_r.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strerror.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strerror_r.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strlcat.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strlcpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strlen.c  \
-@NEWLIB_MINIMAL_GPU_FALSE@	strlwr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strncasecmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strncat.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strncmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strncpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strnlen.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strnstr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strpbrk.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strrchr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strsep.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strsignal.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strspn.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strtok.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strtok_r.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strupr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	strxfrm.c  \
-@NEWLIB_MINIMAL_GPU_FALSE@	strstr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	swab.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	timingsafe_bcmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	timingsafe_memcmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	u_strerr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscat.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcschr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscoll.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcscspn.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcslcat.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcslcpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcslen.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsncat.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsncmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsncpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsnlen.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcspbrk.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsrchr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsspn.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsstr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcstok.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcswidth.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcsxfrm.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wcwidth.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemchr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemcmp.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemcpy.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemmove.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	wmemset.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	xpg_strerror_r.c
-
-@NEWLIB_MINIMAL_GPU_TRUE@GENERAL_SOURCES = \
-@NEWLIB_MINIMAL_GPU_TRUE@	bcopy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	bzero.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	explicit_bzero.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	ffsl.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	ffsll.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	fls.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	flsl.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	flsll.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	index.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	memchr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	memcmp.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	memcpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	memmove.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	memset.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	rindex.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcasecmp.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcat.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strchr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcmp.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcoll.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strcspn.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strdup.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strdup_r.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strerror.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strerror_r.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strlcat.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strlcpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strlen.c  \
-@NEWLIB_MINIMAL_GPU_TRUE@	strlwr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strncasecmp.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strncat.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strncmp.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strncpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strnlen.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strnstr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strpbrk.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strrchr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strsep.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strsignal.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strspn.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strtok.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strtok_r.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strupr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	strxfrm.c  \
-@NEWLIB_MINIMAL_GPU_TRUE@	strstr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	swab.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	u_strerr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        bcmp.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        memccpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        mempcpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        stpcpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        stpncpy.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        strndup.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        strcasestr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        strndup_r.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        strchrnul.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        memmem.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        memrchr.c \
-@NEWLIB_MINIMAL_GPU_TRUE@        rawmemchr.c
+GENERAL_SOURCES = \
+	bcopy.c \
+	bzero.c \
+	explicit_bzero.c \
+	ffsl.c \
+	ffsll.c \
+	fls.c \
+	flsl.c \
+	flsll.c \
+	index.c \
+	memchr.c \
+	memcmp.c \
+	memcpy.c \
+	memmove.c \
+	memset.c \
+	rindex.c \
+	strcasecmp.c \
+	strcat.c \
+	strchr.c \
+	strcmp.c \
+	strcoll.c \
+	strcpy.c \
+	strcspn.c \
+	strdup.c \
+	strdup_r.c \
+	strerror.c \
+	strerror_r.c \
+	strlcat.c \
+	strlcpy.c \
+	strlen.c  \
+	strlwr.c \
+	strncasecmp.c \
+	strncat.c \
+	strncmp.c \
+	strncpy.c \
+	strnlen.c \
+	strnstr.c \
+	strpbrk.c \
+	strrchr.c \
+	strsep.c \
+	strsignal.c \
+	strspn.c \
+	strtok.c \
+	strtok_r.c \
+	strupr.c \
+	strxfrm.c  \
+	strstr.c \
+	swab.c \
+	timingsafe_bcmp.c \
+	timingsafe_memcmp.c \
+	u_strerr.c \
+	wcscat.c \
+	wcschr.c \
+	wcscmp.c \
+	wcscoll.c \
+	wcscpy.c \
+	wcscspn.c \
+	wcslcat.c \
+	wcslcpy.c \
+	wcslen.c \
+	wcsncat.c \
+	wcsncmp.c \
+	wcsncpy.c \
+	wcsnlen.c \
+	wcspbrk.c \
+	wcsrchr.c \
+	wcsspn.c \
+	wcsstr.c \
+	wcstok.c \
+	wcswidth.c \
+	wcsxfrm.c \
+	wcwidth.c \
+	wmemchr.c \
+	wmemcmp.c \
+	wmemcpy.c \
+	wmemmove.c \
+	wmemset.c \
+	xpg_strerror_r.c
 
 @ELIX_LEVEL_1_FALSE@ELIX_2_SOURCES = \
 @ELIX_LEVEL_1_FALSE@	bcmp.c \
@@ -1273,35 +1081,17 @@ lib_a-strcasestr.o: strcasestr.c
 lib_a-strcasestr.obj: strcasestr.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strcasestr.obj `if test -f 'strcasestr.c'; then $(CYGPATH_W) 'strcasestr.c'; else $(CYGPATH_W) '$(srcdir)/strcasestr.c'; fi`
 
-lib_a-strndup_r.o: strndup_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strndup_r.o `test -f 'strndup_r.c' || echo '$(srcdir)/'`strndup_r.c
-
-lib_a-strndup_r.obj: strndup_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strndup_r.obj `if test -f 'strndup_r.c'; then $(CYGPATH_W) 'strndup_r.c'; else $(CYGPATH_W) '$(srcdir)/strndup_r.c'; fi`
-
 lib_a-strchrnul.o: strchrnul.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strchrnul.o `test -f 'strchrnul.c' || echo '$(srcdir)/'`strchrnul.c
 
 lib_a-strchrnul.obj: strchrnul.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strchrnul.obj `if test -f 'strchrnul.c'; then $(CYGPATH_W) 'strchrnul.c'; else $(CYGPATH_W) '$(srcdir)/strchrnul.c'; fi`
 
-lib_a-memmem.o: memmem.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memmem.o `test -f 'memmem.c' || echo '$(srcdir)/'`memmem.c
+lib_a-strndup_r.o: strndup_r.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strndup_r.o `test -f 'strndup_r.c' || echo '$(srcdir)/'`strndup_r.c
 
-lib_a-memmem.obj: memmem.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memmem.obj `if test -f 'memmem.c'; then $(CYGPATH_W) 'memmem.c'; else $(CYGPATH_W) '$(srcdir)/memmem.c'; fi`
-
-lib_a-memrchr.o: memrchr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memrchr.o `test -f 'memrchr.c' || echo '$(srcdir)/'`memrchr.c
-
-lib_a-memrchr.obj: memrchr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memrchr.obj `if test -f 'memrchr.c'; then $(CYGPATH_W) 'memrchr.c'; else $(CYGPATH_W) '$(srcdir)/memrchr.c'; fi`
-
-lib_a-rawmemchr.o: rawmemchr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rawmemchr.o `test -f 'rawmemchr.c' || echo '$(srcdir)/'`rawmemchr.c
-
-lib_a-rawmemchr.obj: rawmemchr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rawmemchr.obj `if test -f 'rawmemchr.c'; then $(CYGPATH_W) 'rawmemchr.c'; else $(CYGPATH_W) '$(srcdir)/rawmemchr.c'; fi`
+lib_a-strndup_r.obj: strndup_r.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strndup_r.obj `if test -f 'strndup_r.c'; then $(CYGPATH_W) 'strndup_r.c'; else $(CYGPATH_W) '$(srcdir)/strndup_r.c'; fi`
 
 lib_a-wcpcpy.o: wcpcpy.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-wcpcpy.o `test -f 'wcpcpy.c' || echo '$(srcdir)/'`wcpcpy.c
@@ -1326,6 +1116,24 @@ lib_a-gnu_basename.o: gnu_basename.c
 
 lib_a-gnu_basename.obj: gnu_basename.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gnu_basename.obj `if test -f 'gnu_basename.c'; then $(CYGPATH_W) 'gnu_basename.c'; else $(CYGPATH_W) '$(srcdir)/gnu_basename.c'; fi`
+
+lib_a-memmem.o: memmem.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memmem.o `test -f 'memmem.c' || echo '$(srcdir)/'`memmem.c
+
+lib_a-memmem.obj: memmem.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memmem.obj `if test -f 'memmem.c'; then $(CYGPATH_W) 'memmem.c'; else $(CYGPATH_W) '$(srcdir)/memmem.c'; fi`
+
+lib_a-memrchr.o: memrchr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memrchr.o `test -f 'memrchr.c' || echo '$(srcdir)/'`memrchr.c
+
+lib_a-memrchr.obj: memrchr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memrchr.obj `if test -f 'memrchr.c'; then $(CYGPATH_W) 'memrchr.c'; else $(CYGPATH_W) '$(srcdir)/memrchr.c'; fi`
+
+lib_a-rawmemchr.o: rawmemchr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rawmemchr.o `test -f 'rawmemchr.c' || echo '$(srcdir)/'`rawmemchr.c
+
+lib_a-rawmemchr.obj: rawmemchr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rawmemchr.obj `if test -f 'rawmemchr.c'; then $(CYGPATH_W) 'rawmemchr.c'; else $(CYGPATH_W) '$(srcdir)/rawmemchr.c'; fi`
 
 lib_a-strcasecmp_l.o: strcasecmp_l.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strcasecmp_l.o `test -f 'strcasecmp_l.c' || echo '$(srcdir)/'`strcasecmp_l.c

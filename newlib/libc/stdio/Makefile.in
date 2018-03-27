@@ -71,98 +71,56 @@ CONFIG_CLEAN_VPATH_FILES =
 LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_1 = lib_a-fiprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-fiscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-iprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-iscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-siprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-siscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-sniprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vdiprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vfprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vfwprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-viprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-viscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vsiprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vsiscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vsniprintf.$(OBJEXT)
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_1 = lib_a-siprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-siscanf.$(OBJEXT)
-@NEWLIB_MINIMAL_GPU_FALSE@am__objects_2 = $(am__objects_1) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-clearerr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fclose.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fdopen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-feof.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-ferror.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fflush.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fgetc.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fgetpos.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fgets.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fileno.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-findfp.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-flags.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fopen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fputc.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fputs.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fread.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-freopen.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fseek.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fsetpos.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-ftell.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fvwrite.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fwalk.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fwrite.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getc.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getchar.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getc_u.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getchar_u.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getdelim.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getline.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-gets.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-makebuf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-perror.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-printf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-putc.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-putchar.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-putc_u.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-putchar_u.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-puts.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-refill.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-remove.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-rename.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-rewind.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-rget.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-scanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-sccl.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-setbuf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-setbuffer.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-setlinebuf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-setvbuf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-snprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-sprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-sscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-stdio.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-tmpfile.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-tmpnam.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-ungetc.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-vdprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-vprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-vscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-vsnprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-vsprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-vsscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wbuf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-wsetup.$(OBJEXT)
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_2 = $(am__objects_1) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-snprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-sprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-sscanf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-vsnprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-vsprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-vfprintf.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-vsscanf.$(OBJEXT)
+@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_1 =  \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-fiprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-fiscanf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-iprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-iscanf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-siprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-siscanf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-sniprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vdiprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vfprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vfwprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-viprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-viscanf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vsiprintf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vsiscanf.$(OBJEXT) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vsniprintf.$(OBJEXT)
+am__objects_2 = $(am__objects_1) lib_a-clearerr.$(OBJEXT) \
+	lib_a-fclose.$(OBJEXT) lib_a-fdopen.$(OBJEXT) \
+	lib_a-feof.$(OBJEXT) lib_a-ferror.$(OBJEXT) \
+	lib_a-fflush.$(OBJEXT) lib_a-fgetc.$(OBJEXT) \
+	lib_a-fgetpos.$(OBJEXT) lib_a-fgets.$(OBJEXT) \
+	lib_a-fileno.$(OBJEXT) lib_a-findfp.$(OBJEXT) \
+	lib_a-flags.$(OBJEXT) lib_a-fopen.$(OBJEXT) \
+	lib_a-fprintf.$(OBJEXT) lib_a-fputc.$(OBJEXT) \
+	lib_a-fputs.$(OBJEXT) lib_a-fread.$(OBJEXT) \
+	lib_a-freopen.$(OBJEXT) lib_a-fscanf.$(OBJEXT) \
+	lib_a-fseek.$(OBJEXT) lib_a-fsetpos.$(OBJEXT) \
+	lib_a-ftell.$(OBJEXT) lib_a-fvwrite.$(OBJEXT) \
+	lib_a-fwalk.$(OBJEXT) lib_a-fwrite.$(OBJEXT) \
+	lib_a-getc.$(OBJEXT) lib_a-getchar.$(OBJEXT) \
+	lib_a-getc_u.$(OBJEXT) lib_a-getchar_u.$(OBJEXT) \
+	lib_a-getdelim.$(OBJEXT) lib_a-getline.$(OBJEXT) \
+	lib_a-gets.$(OBJEXT) lib_a-makebuf.$(OBJEXT) \
+	lib_a-perror.$(OBJEXT) lib_a-printf.$(OBJEXT) \
+	lib_a-putc.$(OBJEXT) lib_a-putchar.$(OBJEXT) \
+	lib_a-putc_u.$(OBJEXT) lib_a-putchar_u.$(OBJEXT) \
+	lib_a-puts.$(OBJEXT) lib_a-refill.$(OBJEXT) \
+	lib_a-remove.$(OBJEXT) lib_a-rename.$(OBJEXT) \
+	lib_a-rewind.$(OBJEXT) lib_a-rget.$(OBJEXT) \
+	lib_a-scanf.$(OBJEXT) lib_a-sccl.$(OBJEXT) \
+	lib_a-setbuf.$(OBJEXT) lib_a-setbuffer.$(OBJEXT) \
+	lib_a-setlinebuf.$(OBJEXT) lib_a-setvbuf.$(OBJEXT) \
+	lib_a-snprintf.$(OBJEXT) lib_a-sprintf.$(OBJEXT) \
+	lib_a-sscanf.$(OBJEXT) lib_a-stdio.$(OBJEXT) \
+	lib_a-tmpfile.$(OBJEXT) lib_a-tmpnam.$(OBJEXT) \
+	lib_a-ungetc.$(OBJEXT) lib_a-vdprintf.$(OBJEXT) \
+	lib_a-vprintf.$(OBJEXT) lib_a-vscanf.$(OBJEXT) \
+	lib_a-vsnprintf.$(OBJEXT) lib_a-vsprintf.$(OBJEXT) \
+	lib_a-vsscanf.$(OBJEXT) lib_a-wbuf.$(OBJEXT) \
+	lib_a-wsetup.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_3 = lib_a-asiprintf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	lib_a-vasiprintf.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@am__objects_4 = $(am__objects_3) \
@@ -231,48 +189,27 @@ lib_a_AR = $(AR) $(ARFLAGS)
 @USE_LIBTOOL_FALSE@	$(am__objects_4) $(am__objects_6)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_7 = fiprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	fiscanf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	iprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	iscanf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	siprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	siscanf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	sniprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vdiprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfwprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	viprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	viscanf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiscanf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsniprintf.lo
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_7 = siprintf.lo siscanf.lo
-@NEWLIB_MINIMAL_GPU_FALSE@am__objects_8 = $(am__objects_7) clearerr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fclose.lo fdopen.lo feof.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	ferror.lo fflush.lo fgetc.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fgetpos.lo fgets.lo fileno.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	findfp.lo flags.lo fopen.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fprintf.lo fputc.lo fputs.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fread.lo freopen.lo fscanf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fseek.lo fsetpos.lo ftell.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fvwrite.lo fwalk.lo fwrite.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	getc.lo getchar.lo getc_u.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	getchar_u.lo getdelim.lo getline.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	gets.lo makebuf.lo perror.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	printf.lo putc.lo putchar.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	putc_u.lo putchar_u.lo puts.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	refill.lo remove.lo rename.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	rewind.lo rget.lo scanf.lo sccl.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	setbuf.lo setbuffer.lo setlinebuf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	setvbuf.lo snprintf.lo sprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	sscanf.lo stdio.lo tmpfile.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	tmpnam.lo ungetc.lo vdprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	vprintf.lo vscanf.lo vsnprintf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	vsprintf.lo vsscanf.lo wbuf.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	wsetup.lo
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_8 = $(am__objects_7) snprintf.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	sprintf.lo sscanf.lo vsnprintf.lo \
-@NEWLIB_MINIMAL_GPU_TRUE@	vsprintf.lo vfprintf.lo vsscanf.lo
+@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_7 = fiprintf.lo fiscanf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	iprintf.lo iscanf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	siprintf.lo siscanf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	sniprintf.lo vdiprintf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfprintf.lo vfwprintf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	viprintf.lo viscanf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiprintf.lo vsiscanf.lo \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsniprintf.lo
+am__objects_8 = $(am__objects_7) clearerr.lo fclose.lo fdopen.lo \
+	feof.lo ferror.lo fflush.lo fgetc.lo fgetpos.lo fgets.lo \
+	fileno.lo findfp.lo flags.lo fopen.lo fprintf.lo fputc.lo \
+	fputs.lo fread.lo freopen.lo fscanf.lo fseek.lo fsetpos.lo \
+	ftell.lo fvwrite.lo fwalk.lo fwrite.lo getc.lo getchar.lo \
+	getc_u.lo getchar_u.lo getdelim.lo getline.lo gets.lo \
+	makebuf.lo perror.lo printf.lo putc.lo putchar.lo putc_u.lo \
+	putchar_u.lo puts.lo refill.lo remove.lo rename.lo rewind.lo \
+	rget.lo scanf.lo sccl.lo setbuf.lo setbuffer.lo setlinebuf.lo \
+	setvbuf.lo snprintf.lo sprintf.lo sscanf.lo stdio.lo \
+	tmpfile.lo tmpnam.lo ungetc.lo vdprintf.lo vprintf.lo \
+	vscanf.lo vsnprintf.lo vsprintf.lo vsscanf.lo wbuf.lo \
+	wsetup.lo
 @ELIX_LEVEL_1_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_9 = asiprintf.lo \
 @ELIX_LEVEL_1_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vasiprintf.lo
 @ELIX_LEVEL_1_FALSE@am__objects_10 = $(am__objects_9) asprintf.lo \
@@ -505,106 +442,92 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@GENERAL_INT_FORMATTED_IO_SOURCES = \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	fiprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	fiscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	iprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	iscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	siprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	siscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	sniprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vdiprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfwprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	viprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	viscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsniprintf.c
+@NEWLIB_NANO_FORMATTED_IO_FALSE@GENERAL_INT_FORMATTED_IO_SOURCES = \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	fiprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	fiscanf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	iprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	iscanf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	siprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	siscanf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	sniprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vdiprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vfwprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	viprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	viscanf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiprintf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsiscanf.c			\
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	vsniprintf.c
 
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@GENERAL_INT_FORMATTED_IO_SOURCES = 
-@NEWLIB_MINIMAL_GPU_TRUE@GENERAL_INT_FORMATTED_IO_SOURCES = \
-@NEWLIB_MINIMAL_GPU_TRUE@	siprintf.c			\
-@NEWLIB_MINIMAL_GPU_TRUE@	siscanf.c
-
-@NEWLIB_MINIMAL_GPU_FALSE@GENERAL_SOURCES = \
-@NEWLIB_MINIMAL_GPU_FALSE@	$(GENERAL_INT_FORMATTED_IO_SOURCES) \
-@NEWLIB_MINIMAL_GPU_FALSE@	clearerr.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fclose.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fdopen.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	feof.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	ferror.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fflush.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fgetc.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fgetpos.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fgets.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fileno.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	findfp.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	flags.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fopen.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fputc.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fputs.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fread.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	freopen.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fseek.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fsetpos.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	ftell.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fvwrite.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fwalk.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	fwrite.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	getc.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	getchar.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	getc_u.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	getchar_u.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	getdelim.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	getline.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	gets.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	makebuf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	perror.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	printf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	putc.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	putchar.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	putc_u.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	putchar_u.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	puts.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	refill.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	remove.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	rename.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	rewind.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	rget.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	scanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	sccl.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	setbuf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	setbuffer.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	setlinebuf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	setvbuf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	snprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	sprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	sscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	stdio.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	tmpfile.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	tmpnam.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	ungetc.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	vdprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	vprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	vscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	vsnprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	vsprintf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	vsscanf.c			\
-@NEWLIB_MINIMAL_GPU_FALSE@	wbuf.c				\
-@NEWLIB_MINIMAL_GPU_FALSE@	wsetup.c
-
-@NEWLIB_MINIMAL_GPU_TRUE@GENERAL_SOURCES = \
-@NEWLIB_MINIMAL_GPU_TRUE@        $(GENERAL_INT_FORMATTED_IO_SOURCES) \
-@NEWLIB_MINIMAL_GPU_TRUE@        snprintf.c                      \
-@NEWLIB_MINIMAL_GPU_TRUE@        sprintf.c                       \
-@NEWLIB_MINIMAL_GPU_TRUE@        sscanf.c                        \
-@NEWLIB_MINIMAL_GPU_TRUE@        vsnprintf.c                     \
-@NEWLIB_MINIMAL_GPU_TRUE@        vsprintf.c                      \
-@NEWLIB_MINIMAL_GPU_TRUE@        vfprintf.c                      \
-@NEWLIB_MINIMAL_GPU_TRUE@        vsscanf.c
+@NEWLIB_NANO_FORMATTED_IO_TRUE@GENERAL_INT_FORMATTED_IO_SOURCES = 
+GENERAL_SOURCES = \
+	$(GENERAL_INT_FORMATTED_IO_SOURCES) \
+	clearerr.c			\
+	fclose.c			\
+	fdopen.c			\
+	feof.c				\
+	ferror.c			\
+	fflush.c			\
+	fgetc.c			\
+	fgetpos.c			\
+	fgets.c			\
+	fileno.c			\
+	findfp.c			\
+	flags.c			\
+	fopen.c			\
+	fprintf.c			\
+	fputc.c			\
+	fputs.c			\
+	fread.c			\
+	freopen.c			\
+	fscanf.c			\
+	fseek.c			\
+	fsetpos.c			\
+	ftell.c			\
+	fvwrite.c			\
+	fwalk.c			\
+	fwrite.c			\
+	getc.c				\
+	getchar.c			\
+	getc_u.c			\
+	getchar_u.c			\
+	getdelim.c			\
+	getline.c			\
+	gets.c				\
+	makebuf.c			\
+	perror.c			\
+	printf.c			\
+	putc.c				\
+	putchar.c			\
+	putc_u.c			\
+	putchar_u.c			\
+	puts.c				\
+	refill.c			\
+	remove.c			\
+	rename.c			\
+	rewind.c			\
+	rget.c				\
+	scanf.c			\
+	sccl.c				\
+	setbuf.c			\
+	setbuffer.c			\
+	setlinebuf.c			\
+	setvbuf.c			\
+	snprintf.c			\
+	sprintf.c			\
+	sscanf.c			\
+	stdio.c			\
+	tmpfile.c			\
+	tmpnam.c			\
+	ungetc.c			\
+	vdprintf.c			\
+	vprintf.c			\
+	vscanf.c			\
+	vsnprintf.c			\
+	vsprintf.c			\
+	vsscanf.c			\
+	wbuf.c				\
+	wsetup.c
 
 @ELIX_LEVEL_1_FALSE@ELIX_2_SOURCES = \
 @ELIX_LEVEL_1_FALSE@	$(ELIX_2_INT_FORMATTED_IO_SOURCES) \
@@ -684,36 +607,32 @@ INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	vasniprintf.c
 
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@ELIX_4_INT_FORMATTED_IO_SOURCES = 
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@LIBADD_OBJS = \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiprintf.$(oext) $(lpfx)svfprintf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiscanf.$(oext) $(lpfx)svfscanf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfiprintf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfscanf.$(oext) $(lpfx)vfiscanf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiwprintf.$(oext) $(lpfx)svfwprintf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfiwprintf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiwscanf.$(oext) $(lpfx)svfwscanf.$(oext) \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfiwscanf.$(oext) $(lpfx)vfwscanf.$(oext)
+@NEWLIB_NANO_FORMATTED_IO_FALSE@LIBADD_OBJS = \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiprintf.$(oext) $(lpfx)svfprintf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiscanf.$(oext) $(lpfx)svfscanf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfiprintf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfscanf.$(oext) $(lpfx)vfiscanf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiwprintf.$(oext) $(lpfx)svfwprintf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfiwprintf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)svfiwscanf.$(oext) $(lpfx)svfwscanf.$(oext) \
+@NEWLIB_NANO_FORMATTED_IO_FALSE@	$(lpfx)vfiwscanf.$(oext) $(lpfx)vfwscanf.$(oext)
 
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@LIBADD_OBJS = \
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfprintf_float.$(oext)	\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-svfprintf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-svfscanf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfprintf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfprintf_i.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfscanf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfscanf_i.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfscanf_float.$(oext)	\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfiwprintf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfwprintf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)vfiwprintf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfiwscanf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfwscanf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)vfiwscanf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_FALSE@@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)vfwscanf.$(oext)
-
-@NEWLIB_MINIMAL_GPU_TRUE@LIBADD_OBJS = \
-@NEWLIB_MINIMAL_GPU_TRUE@	$(lpfx)svfiprintf.$(oext)		\
-@NEWLIB_MINIMAL_GPU_TRUE@	$(lpfx)svfprintf.$(oext)
+@NEWLIB_NANO_FORMATTED_IO_TRUE@LIBADD_OBJS = \
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfprintf_float.$(oext)	\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-svfprintf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-svfscanf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfprintf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfprintf_i.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfscanf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfscanf_i.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)nano-vfscanf_float.$(oext)	\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfiwprintf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfwprintf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)vfiwprintf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfiwscanf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)svfwscanf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)vfiwscanf.$(oext)		\
+@NEWLIB_NANO_FORMATTED_IO_TRUE@	$(lpfx)vfwscanf.$(oext)
 
 libstdio_la_LDFLAGS = -Xcompiler -nostdlib
 @USE_LIBTOOL_TRUE@noinst_LTLIBRARIES = libstdio.la

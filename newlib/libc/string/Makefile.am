@@ -4,69 +4,6 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
-if NEWLIB_MINIMAL_GPU
-GENERAL_SOURCES = \
-	bcopy.c \
-	bzero.c \
-	explicit_bzero.c \
-	ffsl.c \
-	ffsll.c \
-	fls.c \
-	flsl.c \
-	flsll.c \
-	index.c \
-	memchr.c \
-	memcmp.c \
-	memcpy.c \
-	memmove.c \
-	memset.c \
-	rindex.c \
-	strcasecmp.c \
-	strcat.c \
-	strchr.c \
-	strcmp.c \
-	strcoll.c \
-	strcpy.c \
-	strcspn.c \
-	strdup.c \
-	strdup_r.c \
-	strerror.c \
-	strerror_r.c \
-	strlcat.c \
-	strlcpy.c \
-	strlen.c  \
-	strlwr.c \
-	strncasecmp.c \
-	strncat.c \
-	strncmp.c \
-	strncpy.c \
-	strnlen.c \
-	strnstr.c \
-	strpbrk.c \
-	strrchr.c \
-	strsep.c \
-	strsignal.c \
-	strspn.c \
-	strtok.c \
-	strtok_r.c \
-	strupr.c \
-	strxfrm.c  \
-	strstr.c \
-	swab.c \
-	u_strerr.c \
-        bcmp.c \
-        memccpy.c \
-        mempcpy.c \
-        stpcpy.c \
-        stpncpy.c \
-        strndup.c \
-        strcasestr.c \
-        strndup_r.c \
-        strchrnul.c \
-        memmem.c \
-        memrchr.c \
-        rawmemchr.c
-else
 GENERAL_SOURCES = \
 	bcopy.c \
 	bzero.c \
@@ -145,7 +82,6 @@ GENERAL_SOURCES = \
 	wmemmove.c \
 	wmemset.c \
 	xpg_strerror_r.c
-endif
 
 if ELIX_LEVEL_1
 ELIX_2_SOURCES =

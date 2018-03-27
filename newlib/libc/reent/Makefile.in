@@ -72,33 +72,21 @@ LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
-@NEWLIB_MINIMAL_GPU_FALSE@am__objects_1 = lib_a-closer.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-reent.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-impure.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fcntlr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-fstatr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-getreent.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-gettimeofdayr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-isattyr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-linkr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-lseekr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-mkdirr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-openr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-readr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-renamer.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-signalr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-signgam.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-sbrkr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-statr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-timesr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-unlinkr.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-writer.$(OBJEXT)
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_1 = lib_a-reent.$(OBJEXT) \
-@NEWLIB_MINIMAL_GPU_TRUE@	lib_a-impure.$(OBJEXT)
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@am__objects_2 = lib_a-fstat64r.$(OBJEXT) \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-lseek64r.$(OBJEXT) \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-stat64r.$(OBJEXT) \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	lib_a-open64r.$(OBJEXT)
+am__objects_1 = lib_a-closer.$(OBJEXT) lib_a-reent.$(OBJEXT) \
+	lib_a-impure.$(OBJEXT) lib_a-fcntlr.$(OBJEXT) \
+	lib_a-fstatr.$(OBJEXT) lib_a-getreent.$(OBJEXT) \
+	lib_a-gettimeofdayr.$(OBJEXT) lib_a-isattyr.$(OBJEXT) \
+	lib_a-linkr.$(OBJEXT) lib_a-lseekr.$(OBJEXT) \
+	lib_a-mkdirr.$(OBJEXT) lib_a-openr.$(OBJEXT) \
+	lib_a-readr.$(OBJEXT) lib_a-renamer.$(OBJEXT) \
+	lib_a-signalr.$(OBJEXT) lib_a-signgam.$(OBJEXT) \
+	lib_a-sbrkr.$(OBJEXT) lib_a-statr.$(OBJEXT) \
+	lib_a-timesr.$(OBJEXT) lib_a-unlinkr.$(OBJEXT) \
+	lib_a-writer.$(OBJEXT)
+@HAVE_STDIO64_DIR_TRUE@am__objects_2 = lib_a-fstat64r.$(OBJEXT) \
+@HAVE_STDIO64_DIR_TRUE@	lib_a-lseek64r.$(OBJEXT) \
+@HAVE_STDIO64_DIR_TRUE@	lib_a-stat64r.$(OBJEXT) \
+@HAVE_STDIO64_DIR_TRUE@	lib_a-open64r.$(OBJEXT)
 am__objects_3 = $(am__objects_2)
 am__objects_4 = lib_a-execr.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@am__objects_5 =  \
@@ -111,19 +99,12 @@ am__objects_4 = lib_a-execr.$(OBJEXT)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libreent_la_LIBADD =
-@NEWLIB_MINIMAL_GPU_FALSE@am__objects_6 = closer.lo reent.lo impure.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	fcntlr.lo fstatr.lo getreent.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	gettimeofdayr.lo isattyr.lo linkr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	lseekr.lo mkdirr.lo openr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	readr.lo renamer.lo signalr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	signgam.lo sbrkr.lo statr.lo \
-@NEWLIB_MINIMAL_GPU_FALSE@	timesr.lo unlinkr.lo writer.lo
-@NEWLIB_MINIMAL_GPU_TRUE@am__objects_6 = reent.lo impure.lo
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@am__objects_7 =  \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	fstat64r.lo \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	lseek64r.lo \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	stat64r.lo \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	open64r.lo
+am__objects_6 = closer.lo reent.lo impure.lo fcntlr.lo fstatr.lo \
+	getreent.lo gettimeofdayr.lo isattyr.lo linkr.lo lseekr.lo \
+	mkdirr.lo openr.lo readr.lo renamer.lo signalr.lo signgam.lo \
+	sbrkr.lo statr.lo timesr.lo unlinkr.lo writer.lo
+@HAVE_STDIO64_DIR_TRUE@am__objects_7 = fstat64r.lo lseek64r.lo \
+@HAVE_STDIO64_DIR_TRUE@	stat64r.lo open64r.lo
 am__objects_8 = $(am__objects_7)
 am__objects_9 = execr.lo
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@am__objects_10 =  \
@@ -305,51 +286,45 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@STDIO64_SOURCES = \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	fstat64r.c \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	lseek64r.c \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	stat64r.c \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	open64r.c
+@HAVE_STDIO64_DIR_TRUE@STDIO64_SOURCES = \
+@HAVE_STDIO64_DIR_TRUE@	fstat64r.c \
+@HAVE_STDIO64_DIR_TRUE@	lseek64r.c \
+@HAVE_STDIO64_DIR_TRUE@	stat64r.c \
+@HAVE_STDIO64_DIR_TRUE@	open64r.c
 
-@NEWLIB_MINIMAL_GPU_TRUE@STDIO64_SOURCES = 
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@STDIO64_DEFS = \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	fstat64r.def \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	lseek64r.def \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	stat64r.def \
-@HAVE_STDIO64_DIR_TRUE@@NEWLIB_MINIMAL_GPU_FALSE@	open64r.def
+@HAVE_STDIO64_DIR_TRUE@STDIO64_DEFS = \
+@HAVE_STDIO64_DIR_TRUE@	fstat64r.def \
+@HAVE_STDIO64_DIR_TRUE@	lseek64r.def \
+@HAVE_STDIO64_DIR_TRUE@	stat64r.def \
+@HAVE_STDIO64_DIR_TRUE@	open64r.def
 
-@NEWLIB_MINIMAL_GPU_TRUE@STDIO64_DEFS = 
 ELIX_2_SOURCES = $(STDIO64_SOURCES)
 ELIX_3_SOURCES = execr.c
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@ELIX_SOURCES = $(ELIX_2_SOURCES) $(ELIX_3_SOURCES)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_TRUE@ELIX_SOURCES = $(ELIX_2_SOURCES)
 @ELIX_LEVEL_1_TRUE@ELIX_SOURCES = 
-@NEWLIB_MINIMAL_GPU_FALSE@GENERAL_SOURCES = \
-@NEWLIB_MINIMAL_GPU_FALSE@	closer.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	reent.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	impure.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	fcntlr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	fstatr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	getreent.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	gettimeofdayr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	isattyr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	linkr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	lseekr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	mkdirr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	openr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	readr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	renamer.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	signalr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	signgam.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	sbrkr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	statr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	timesr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	unlinkr.c \
-@NEWLIB_MINIMAL_GPU_FALSE@	writer.c
-
-@NEWLIB_MINIMAL_GPU_TRUE@GENERAL_SOURCES = \
-@NEWLIB_MINIMAL_GPU_TRUE@	reent.c \
-@NEWLIB_MINIMAL_GPU_TRUE@	impure.c
+GENERAL_SOURCES = \
+	closer.c \
+	reent.c \
+	impure.c \
+	fcntlr.c \
+	fstatr.c \
+	getreent.c \
+	gettimeofdayr.c \
+	isattyr.c \
+	linkr.c \
+	lseekr.c \
+	mkdirr.c \
+	openr.c \
+	readr.c \
+	renamer.c \
+	signalr.c \
+	signgam.c \
+	sbrkr.c \
+	statr.c \
+	timesr.c \
+	unlinkr.c \
+	writer.c
 
 libreent_la_LDFLAGS = -Xcompiler -nostdlib
 @USE_LIBTOOL_TRUE@noinst_LTLIBRARIES = libreent.la

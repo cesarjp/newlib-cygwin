@@ -4,11 +4,6 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
-if NEWLIB_MINIMAL_GPU
-GENERAL_INT_FORMATTED_IO_SOURCES = \
-	siprintf.c			\
-	siscanf.c
-else
 if NEWLIB_NANO_FORMATTED_IO
 GENERAL_INT_FORMATTED_IO_SOURCES =
 else
@@ -29,19 +24,7 @@ GENERAL_INT_FORMATTED_IO_SOURCES = \
 	vsiscanf.c			\
 	vsniprintf.c
 endif
-endif
 
-if NEWLIB_MINIMAL_GPU
-GENERAL_SOURCES = \
-        $(GENERAL_INT_FORMATTED_IO_SOURCES) \
-        snprintf.c                      \
-        sprintf.c                       \
-        sscanf.c                        \
-        vsnprintf.c                     \
-        vsprintf.c                      \
-        vfprintf.c                      \
-        vsscanf.c
-else
 GENERAL_SOURCES = \
 	$(GENERAL_INT_FORMATTED_IO_SOURCES) \
 	clearerr.c			\
@@ -110,7 +93,6 @@ GENERAL_SOURCES = \
 	vsscanf.c			\
 	wbuf.c				\
 	wsetup.c
-endif
 
 ## The following are EL/IX level 2 interfaces
 if ELIX_LEVEL_1
@@ -211,11 +193,6 @@ endif !ELIX_LEVEL_3
 endif !ELIX_LEVEL_2
 endif !ELIX_LEVEL_1
 
-if NEWLIB_MINIMAL_GPU
-LIBADD_OBJS = \
-	$(lpfx)svfiprintf.$(oext)		\
-	$(lpfx)svfprintf.$(oext)
-else
 if NEWLIB_NANO_FORMATTED_IO
 LIBADD_OBJS = \
 	$(lpfx)nano-vfprintf_float.$(oext)	\
@@ -243,7 +220,6 @@ LIBADD_OBJS = \
 	$(lpfx)vfiwprintf.$(oext) \
 	$(lpfx)svfiwscanf.$(oext) $(lpfx)svfwscanf.$(oext) \
 	$(lpfx)vfiwscanf.$(oext) $(lpfx)vfwscanf.$(oext)
-endif
 endif
 
 libstdio_la_LDFLAGS = -Xcompiler -nostdlib

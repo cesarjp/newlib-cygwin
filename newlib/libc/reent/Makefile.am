@@ -4,10 +4,6 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
-if NEWLIB_MINIMAL_GPU
-STDIO64_SOURCES =
-STDIO64_DEFS =
-else
 if HAVE_STDIO64_DIR
 STDIO64_SOURCES = \
 	fstat64r.c \
@@ -20,7 +16,6 @@ STDIO64_DEFS = \
 	lseek64r.def \
 	stat64r.def \
 	open64r.def
-endif
 endif
 
 ELIX_2_SOURCES = $(STDIO64_SOURCES)
@@ -36,11 +31,6 @@ ELIX_SOURCES = $(ELIX_2_SOURCES) $(ELIX_3_SOURCES)
 endif
 endif
 
-if NEWLIB_MINIMAL_GPU
-GENERAL_SOURCES = \
-	reent.c \
-	impure.c
-else
 GENERAL_SOURCES = \
 	closer.c \
 	reent.c \
@@ -63,7 +53,6 @@ GENERAL_SOURCES = \
 	timesr.c \
 	unlinkr.c \
 	writer.c
-endif
 
 libreent_la_LDFLAGS = -Xcompiler -nostdlib
 
