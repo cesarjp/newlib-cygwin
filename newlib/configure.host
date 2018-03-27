@@ -75,7 +75,6 @@ default_newlib_nano_malloc=no
 aext=a
 oext=o
 lpfx="lib_a-"
-minimal_gpu=no
 
 case "${target_optspace}:${host}" in
   yes:*)
@@ -251,9 +250,8 @@ case "${host_cpu}" in
 	machine_dir=nios2
 	;;
   nvptx*)
-	newlib_cflags="${newlib_cflags} -DMALLOC_PROVIDED"
 	machine_dir=nvptx
-	minimal_gpu=yes
+	newlib_cflags="${newlib_cflags} -DMALLOC_PROVIDED"
 	;;
   or1k*|or1knd*)
 	machine_dir=or1k
