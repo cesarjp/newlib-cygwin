@@ -424,11 +424,11 @@ int		hexnan (const char **sp, const struct FPI *fpi, __ULong *x0);
 
 #define Bcopy(x,y) memcpy((char *)&x->_sign, (char *)&y->_sign, y->_wds*sizeof(__Long) + 2*sizeof(int))
 
-extern const double tinytens[5];
-extern const double bigtens[5];
-extern const double tens[25];
+extern const double tinytens[];
+extern const double bigtens[];
+extern const double tens[];
 #if !defined(PREFER_SIZE_OVER_SPEED) && !defined(__OPTIMIZE_SIZE__) && !defined(_SMALL_HEXDIG)
-extern const unsigned char __hexdig[256];
+extern const unsigned char __hexdig[];
 #endif /* !defined(PREFER_SIZE_OVER_SPEED) && !defined(__OPTIMIZE_SIZE__) && !defined(_SMALL_HEXDIG) */
 
 
