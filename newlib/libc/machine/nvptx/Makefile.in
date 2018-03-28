@@ -70,11 +70,12 @@ ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
 am_lib_a_OBJECTS = lib_a-calloc.$(OBJEXT) lib_a-callocr.$(OBJEXT) \
- 	lib_a-free.$(OBJEXT) lib_a-realloc.$(OBJEXT) \
- 	lib_a-reallocr.$(OBJEXT) lib_a-malloc.$(OBJEXT) \
- 	lib_a-mallocr.$(OBJEXT) lib_a-write.$(OBJEXT) lib_a-puts.$(OBJEXT) \
-  	lib_a-putchar.$(OBJEXT) lib_a-printf.$(OBJEXT) \
- 	lib_a-abort.$(OBJEXT) lib_a-exit.$(OBJEXT)
+	lib_a-free.$(OBJEXT) lib_a-realloc.$(OBJEXT) \
+	lib_a-reallocr.$(OBJEXT) lib_a-malloc.$(OBJEXT) \
+	lib_a-mallocr.$(OBJEXT) lib_a-write.$(OBJEXT) \
+	lib_a-puts.$(OBJEXT) lib_a-putchar.$(OBJEXT) \
+	lib_a-printf.$(OBJEXT) lib_a-abort.$(OBJEXT) \
+	lib_a-exit.$(OBJEXT) lib_a-misc.$(OBJEXT)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp =
@@ -83,7 +84,6 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
 LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-CCASCOMPILE = $(CCAS) $(AM_CCASFLAGS) $(CCASFLAGS)
 SOURCES = $(lib_a_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
@@ -186,6 +186,7 @@ pdfdir = @pdfdir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -201,7 +202,7 @@ AM_CCASFLAGS = $(INCLUDES)
 noinst_LIBRARIES = lib.a
 lib_a_SOURCES = calloc.c callocr.c free.c realloc.c reallocr.c \
 		malloc.c mallocr.c write.c \
-		puts.c putchar.c printf.c abort.c exit.c
+		puts.c putchar.c printf.c abort.c exit.c misc.c
 
 lib_a_CFLAGS = $(AM_CFLAGS)
 ACLOCAL_AMFLAGS = -I ../../.. -I ../../../..
@@ -209,7 +210,7 @@ CONFIG_STATUS_DEPENDENCIES = $(newlib_basedir)/configure.host
 all: all-am
 
 .SUFFIXES:
-.SUFFIXES: .c .o .obj .s
+.SUFFIXES: .c .o .obj
 am--refresh: Makefile
 	@:
 $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am  $(am__configure_deps)
@@ -342,11 +343,11 @@ lib_a-exit.o: exit.c
 lib_a-exit.obj: exit.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-exit.obj `if test -f 'exit.c'; then $(CYGPATH_W) 'exit.c'; else $(CYGPATH_W) '$(srcdir)/exit.c'; fi`
 
-.s.o:
-	$(CCASCOMPILE) -c -o $@ $<
+lib_a-misc.o: misc.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-misc.o `test -f 'misc.c' || echo '$(srcdir)/'`misc.c
 
-.s.obj:
-	$(CCASCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+lib_a-misc.obj: misc.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-misc.obj `if test -f 'misc.c'; then $(CYGPATH_W) 'misc.c'; else $(CYGPATH_W) '$(srcdir)/misc.c'; fi`
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \

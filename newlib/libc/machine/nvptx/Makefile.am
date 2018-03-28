@@ -10,7 +10,7 @@ noinst_LIBRARIES = lib.a
 
 lib_a_SOURCES = calloc.c callocr.c free.c realloc.c reallocr.c \
 		malloc.c mallocr.c write.c \
-		puts.c putchar.c printf.c abort.c exit.c
+		puts.c putchar.c printf.c abort.c exit.c misc.c
 lib_a_CFLAGS = $(AM_CFLAGS)
 
 ACLOCAL_AMFLAGS = -I ../../.. -I ../../../..

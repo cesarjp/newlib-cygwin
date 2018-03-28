@@ -692,11 +692,7 @@ struct _reent
 extern __FILE __sf[3];
 #define _REENT_STDIO_STREAM(var, index) &__sf[index]
 #else
-#ifdef __nvptx__
-#define _REENT_STDIO_STREAM(var, index) NULL
-#else
 #define _REENT_STDIO_STREAM(var, index) &(var)->__sf[index]
-#endif
 #endif
 
 #define _REENT_INIT(var) \
