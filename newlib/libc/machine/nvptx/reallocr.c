@@ -16,7 +16,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-void *_realloc_os_r (struct _reent *r, void *p, size_t n, size_t oldn)
+void
+*_realloc_gpu_r (struct _reent *r, void *p, size_t n, size_t oldn)
 {
   void *newp = p;
   if (oldn < n)
