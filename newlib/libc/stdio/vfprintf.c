@@ -235,7 +235,7 @@ __ssputs_r (struct _reent *ptr,
 		else
 		{
 			#ifndef __nvptx__
-			str = (unsigned char *)_realloc_os_r (ptr,
+			str = (unsigned char *)_realloc_gpu_r (ptr,
 							      fp->_bf._base,
 							      newsize,
 							      fp->_bf._size);
@@ -326,7 +326,7 @@ __ssprint_r (struct _reent *ptr,
 			else
 			{
 				#ifdef __nvptx__
-				str = (unsigned char *)_realloc_os_r (ptr, fp->_bf._base,
+				str = (unsigned char *)_realloc_gpu_r (ptr, fp->_bf._base,
 					newsize, fp->_bf._size);
 				#else
 				str = (unsigned char *)_realloc_r (ptr, fp->_bf._base,
