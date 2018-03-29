@@ -8,7 +8,7 @@ AM_CCASFLAGS = $(INCLUDES)
 
 noinst_LIBRARIES = lib.a
 
-lib_a_SOURCES = calloc.c malloc.c free.c realloc.c write.c \
+lib_a_SOURCES = calloc.c malloc.c free.c realloc.c write.c assert.c \
 		puts.c putchar.c printf.c abort.c exit.c misc.c
 lib_a_CFLAGS = $(AM_CFLAGS)
 

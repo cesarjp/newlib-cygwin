@@ -71,10 +71,10 @@ lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
 am_lib_a_OBJECTS = lib_a-calloc.$(OBJEXT) lib_a-malloc.$(OBJEXT) \
 	lib_a-free.$(OBJEXT) lib_a-realloc.$(OBJEXT) \
-	lib_a-write.$(OBJEXT) lib_a-puts.$(OBJEXT) \
-	lib_a-putchar.$(OBJEXT) lib_a-printf.$(OBJEXT) \
-	lib_a-abort.$(OBJEXT) lib_a-exit.$(OBJEXT) \
-	lib_a-misc.$(OBJEXT)
+	lib_a-write.$(OBJEXT) lib_a-assert.$(OBJEXT) \
+	lib_a-puts.$(OBJEXT) lib_a-putchar.$(OBJEXT) \
+	lib_a-printf.$(OBJEXT) lib_a-abort.$(OBJEXT) \
+	lib_a-exit.$(OBJEXT) lib_a-misc.$(OBJEXT)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp =
@@ -199,7 +199,7 @@ AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 AM_CCASFLAGS = $(INCLUDES)
 noinst_LIBRARIES = lib.a
-lib_a_SOURCES = calloc.c malloc.c free.c realloc.c write.c \
+lib_a_SOURCES = calloc.c malloc.c free.c realloc.c write.c assert.c \
 		puts.c putchar.c printf.c abort.c exit.c misc.c
 
 lib_a_CFLAGS = $(AM_CFLAGS)
@@ -292,6 +292,12 @@ lib_a-write.o: write.c
 
 lib_a-write.obj: write.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-write.obj `if test -f 'write.c'; then $(CYGPATH_W) 'write.c'; else $(CYGPATH_W) '$(srcdir)/write.c'; fi`
+
+lib_a-assert.o: assert.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-assert.o `test -f 'assert.c' || echo '$(srcdir)/'`assert.c
+
+lib_a-assert.obj: assert.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-assert.obj `if test -f 'assert.c'; then $(CYGPATH_W) 'assert.c'; else $(CYGPATH_W) '$(srcdir)/assert.c'; fi`
 
 lib_a-puts.o: puts.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-puts.o `test -f 'puts.c' || echo '$(srcdir)/'`puts.c
