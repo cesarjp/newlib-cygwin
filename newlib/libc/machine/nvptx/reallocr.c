@@ -14,18 +14,8 @@
  */
 
 #include <stdlib.h>
-#include <string.h>
 
-void
-*_realloc_gpu_r (struct _reent *r, void *p, size_t n, size_t oldn)
+void *_realloc_r (struct _reent *r, void *p, size_t n) _NOTHROW
 {
-  void *newp = p;
-  if (oldn < n)
-    {
-      newp = malloc (n);
-      if (p != 0)
-	memcpy (newp, p, oldn);
-    }
-  return newp;
+  return realloc (p, n);
 }
-
