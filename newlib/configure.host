@@ -251,7 +251,9 @@ case "${host_cpu}" in
 	;;
   nvptx*)
 	machine_dir=nvptx
+	newlib_elix_level=1
 	newlib_cflags="${newlib_cflags} -DMALLOC_PROVIDED"
+	newlib_cflags="${newlib_cflags} -D_WANT_REENT_GLOBAL_STDIO_STREAMS"
 	;;
   or1k*|or1knd*)
 	machine_dir=or1k
