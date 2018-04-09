@@ -27,6 +27,7 @@
 #   newlib_io_c99_formats --enable-newlib-io-c99-formats ("yes", "no", "")
 #   newlib_io_long_long --enable-newlib-io-long-long ("yes", "no", "")
 #   newlib_io_long_double --enable-newlib-io-long-double ("yes", "no", "")
+#   newlib_global_stdio_streams --enable-global-stdio-streams ("yes", "no, "")
 
 # It sets the following shell variables:
 #   newlib_cflags	Special CFLAGS to use when building
@@ -251,9 +252,7 @@ case "${host_cpu}" in
 	;;
   nvptx*)
 	machine_dir=nvptx
-	newlib_elix_level=1
 	newlib_cflags="${newlib_cflags} -DMALLOC_PROVIDED"
-	newlib_cflags="${newlib_cflags} -D_WANT_REENT_GLOBAL_STDIO_STREAMS"
 	;;
   or1k*|or1knd*)
 	machine_dir=or1k
@@ -923,3 +922,15 @@ fi
 if test -z "${have_crt0}" && test -n "${sys_dir}"; then
   have_crt0="yes"
 fi
+
+# Target-specific defaults
+case "${host_cpu}" in
+  nvptx*)
+	if [ "x${newlib_elix_level}" = "x0" ]; then
+		newlib_elix_level=1;
+	fi
+	if [[ -z ${newlib_global_stdio_streams} ]]; then
+		newlib_global_stdio_streams="yes";
+	fi
+	;;
+esac
